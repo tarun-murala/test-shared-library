@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def call(currentBuild, stageName, pipelineName, buildNumber) {
+def call(stageName, pipelineName, buildNumber) {
     def build = currentBuild.build()
     def action = build.getActions(hudson.tasks.junit.TestResultAction.class)
     if (action) {
